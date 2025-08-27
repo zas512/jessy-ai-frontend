@@ -1,0 +1,14 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Jessy text in handwritten script style -->
+  <text x="10" y="28" font-family="cursive, serif" font-size="24" font-weight="bold" fill="#000000">
+    Jessy
+  </text>
+  
+  <!-- Purple sparkle icon -->
+  <g transform="translate(85, 8)">
+    <path d="M2 0L2.5 1.5L4 2L2.5 2.5L2 4L1.5 2.5L0 2L1.5 1.5L2 0Z" fill="#8B5CF6"/>
+    <path d="M6 2L6.25 2.5L6.75 2.75L6.25 3L6 3.5L5.75 3L5.25 2.75L5.75 2.5L6 2Z" fill="#8B5CF6"/>
+    <path d="M2 6L2.25 6.5L2.75 6.75L2.25 7L2 7.5L1.75 7L1.25 6.75L1.75 6.5L2 6Z" fill="#8B5CF6"/>
+    <path d="M-2 2L-1.75 2.5L-1.25 2.75L-1.75 3L-2 3.5L-2.25 3L-2.75 2.75L-2.25 2.5L-2 2Z" fill="#8B5CF6"/>
+  </g>
+</svg>

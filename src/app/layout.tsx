@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Jessy Assistant",
+    title: "Jessy AI",
   },
   formatDetection: {
     telephone: false,
