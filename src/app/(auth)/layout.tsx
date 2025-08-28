@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function AuthLayout({
   children,
@@ -9,6 +10,7 @@ export default function AuthLayout({
 
   return (
     <div className="min-h-screen flex">
+      <LanguageSwitcher />
       <section className="hidden w-1/2 min-h-screen lg:flex flex-col bg-light-pink">
         <div className="flex h-2/3 items-center justify-center">
           <Image

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import PWAInstallPrompt from "@/components/PWAInstallPrompt";
-import { NextIntlClientProvider } from "next-intl";
+import { LocaleProvider } from "@/components/LocaleProvider";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -51,10 +51,10 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={`${montserrat.variable} antialiased`}>
-        <NextIntlClientProvider>
+        <LocaleProvider>
           {children}
           <PWAInstallPrompt />
-        </NextIntlClientProvider>
+        </LocaleProvider>
       </body>
     </html>
   );
