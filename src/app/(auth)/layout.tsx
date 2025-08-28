@@ -1,80 +1,41 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function AuthLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
-  return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
-      {/* Left Panel - Visual and Informational */}
-      <div className="lg:hidden bg-purple-600 p-6 text-white text-center">
-        <h2 className="text-xl font-bold mb-4">
-          Daily Health monitoring Assistance for Older adults
-        </h2>
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center justify-center">
-            <div className="w-1 h-4 bg-white mr-3"></div>
-            <span>Health Monitoring</span>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="w-1 h-4 bg-white mr-3"></div>
-            <span>Medication Reminder</span>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="w-1 h-4 bg-white mr-3"></div>
-            <span>Emergency Support</span>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="w-1 h-4 bg-white mr-3"></div>
-            <span>Voice Interactions</span>
-          </div>
-        </div>
-      </div>
+  const t = useTranslations("AuthLanding");
 
-      <div className="hidden lg:flex lg:w-1/2 relative bg-gray-50">
-        {/* Healthcare Professional Image */}
-        <div className="absolute inset-0 flex items-center justify-center">
+  return (
+    <div className="min-h-screen flex">
+      <section className="hidden w-1/2 min-h-screen lg:flex flex-col bg-light-pink">
+        <div className="flex h-2/3 items-center justify-center">
           <Image
-            src="/healthcare-professional.jpg"
+            src="/jessy_logo.svg"
             alt="Healthcare Professional"
-            width={400}
-            height={600}
-            className="object-cover w-full h-full"
+            width={450}
+            height={450}
             priority
           />
         </div>
-
         {/* Purple overlay with text */}
-        <div className="absolute bottom-0 left-0 right-0 bg-purple-600 p-8">
-          <h2 className="text-white text-xl font-bold text-center mb-6">
-            Daily Health monitoring Assistance for Older adults
-          </h2>
-
-          <div className="space-y-3">
-            <div className="flex items-center text-white">
-              <div className="w-1 h-4 bg-white mr-3"></div>
-              <span>Health Monitoring</span>
-            </div>
-            <div className="flex items-center text-white">
-              <div className="w-1 h-4 bg-white mr-3"></div>
-              <span>Medication Reminder</span>
-            </div>
-            <div className="flex items-center text-white">
-              <div className="w-1 h-4 bg-white mr-3"></div>
-              <span>Emergency Support</span>
-            </div>
-            <div className="flex items-center text-white">
-              <div className="w-1 h-4 bg-white mr-3"></div>
-              <span>Voice Interactions</span>
-            </div>
-          </div>
+        <div className="bg-purple h-1/3 flex flex-col items-center justify-center text-white p-10">
+          <p className="text-xl font-semibold text-center mb-6">
+            {t("tagline")}
+          </p>
+          <section className="bg-white/5 w-[460px] space-y-1 p-10 border-l-2 border-white text-xl font-semibold text-white">
+            <p>{t("features.healthMonitoring")}</p>
+            <p>{t("features.medicationReminder")}</p>
+            <p>{t("features.emergencySupport")}</p>
+            <p>{t("features.voiceInteractions")}</p>
+          </section>
         </div>
-      </div>
-
+      </section>
       {/* Right Panel - Authentication Form */}
-      <div className="w-full lg:w-1/2 bg-white flex items-center justify-center p-4 sm:p-8 flex-1">
+      <section className="w-1/2 flex items-center justify-center p-4 sm:p-8 flex-1">
         <div className="w-full max-w-md">{children}</div>
-      </div>
+      </section>
     </div>
   );
 }

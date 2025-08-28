@@ -1,5 +1,88 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "AuthLanding": {
+    "tagline": "Daily Health monitoring Assistance for Older adults",
+    "features": {
+      "healthMonitoring": "Health Monitoring",
+      "medicationReminder": "Medication Reminder",
+      "emergencySupport": "Emergency Support",
+      "voiceInteractions": "Voice Interactions"
+    }
+  },
+  "SignIn": {
+    "welcome": "Welcome to Jessy!",
+    "subtitle": "Your AI-powered health and safety assistant",
+    "emailForm": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter Email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter Password",
+      "forgotPassword": "Forgot Password?",
+      "signInButton": "Sign In",
+      "signingIn": "Signing in...",
+      "voiceInputButton": "Use Voice Input"
+    },
+    "backButton": "Back",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "forgotPasswordLink": "Forgot your password?"
+  },
+  "SignUp": {
+    "welcome": "Join Jessy!",
+    "subtitle": "Create your account to get started with your AI-powered health and safety assistant",
+    "emailForm": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter Email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "signUpButton": "Sign Up",
+      "signingUp": "Creating account..."
+    },
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "termsText": "By creating an account, you agree to our Terms of Service and Privacy Policy"
+  },
+  "VerifyOTP": {
+    "title": "Verify your email",
+    "subtitle": "We've sent a 6-digit code to your email address. Enter it below to verify your account.",
+    "verifyButton": "Verify Email",
+    "verifying": "Verifying...",
+    "resendText": "Didn't receive the code?",
+    "resendButton": "Resend",
+    "backToSignIn": "← Back to Sign In",
+    "successTitle": "Email verified!",
+    "successSubtitle": "Your email has been successfully verified. You can now access your account.",
+    "continueButton": "Continue to Jessy"
+  },
+  "ResetPassword": {
+    "title": "Reset your password",
+    "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter Email",
+    "sendButton": "Send reset link",
+    "sending": "Sending...",
+    "backToSignIn": "← Back to Sign In",
+    "successTitle": "Check your email",
+    "successSubtitle": "We've sent a password reset link to",
+    "spamText": "Didn't receive the email? Check your spam folder or try again.",
+    "backButton": "Back to Sign In"
+  },
+  "NewPassword": {
+    "title": "Set new password",
+    "subtitle": "Enter your new password to complete the reset process",
+    "passwordLabel": "New Password",
+    "passwordPlaceholder": "Enter new password",
+    "confirmPasswordLabel": "Confirm New Password",
+    "confirmPasswordPlaceholder": "Confirm new password",
+    "resetButton": "Reset Password",
+    "resetting": "Resetting...",
+    "backToSignIn": "← Back to Sign In",
+    "successTitle": "Password reset successfully!",
+    "successSubtitle": "Your password has been updated. You can now sign in with your new password.",
+    "signInButton": "Sign In"
   }
 }

@@ -1,5 +1,88 @@
 {
   "HomePage": {
     "title": "Hola mundo!"
+  },
+  "AuthLanding": {
+    "tagline": "Asistencia diaria de monitoreo de salud para adultos mayores",
+    "features": {
+      "healthMonitoring": "Monitoreo de Salud",
+      "medicationReminder": "Recordatorio de Medicamentos",
+      "emergencySupport": "Soporte de Emergencia",
+      "voiceInteractions": "Interacciones de Voz"
+    }
+  },
+  "SignIn": {
+    "welcome": "¡Bienvenido a Jessy!",
+    "subtitle": "Tu asistente de salud y seguridad impulsado por IA",
+    "emailForm": {
+      "emailLabel": "Dirección de Correo",
+      "emailPlaceholder": "Ingresa tu correo",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "signInButton": "Iniciar Sesión",
+      "signingIn": "Iniciando sesión...",
+      "voiceInputButton": "Usar Entrada de Voz"
+    },
+    "backButton": "Atrás",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Regístrate",
+    "forgotPasswordLink": "¿Olvidaste tu contraseña?"
+  },
+  "SignUp": {
+    "welcome": "¡Únete a Jessy!",
+    "subtitle": "Crea tu cuenta para comenzar con tu asistente de salud y seguridad impulsado por IA",
+    "emailForm": {
+      "emailLabel": "Dirección de Correo",
+      "emailPlaceholder": "Ingresa tu correo",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "confirmPasswordLabel": "Confirmar Contraseña",
+      "confirmPasswordPlaceholder": "Confirmar Contraseña",
+      "signUpButton": "Registrarse",
+      "signingUp": "Creando cuenta..."
+    },
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "signIn": "Iniciar sesión",
+    "termsText": "Al crear una cuenta, aceptas nuestros Términos de Servicio y Política de Privacidad"
+  },
+  "VerifyOTP": {
+    "title": "Verifica tu correo",
+    "subtitle": "Hemos enviado un código de 6 dígitos a tu correo electrónico. Ingrésalo a continuación para verificar tu cuenta.",
+    "verifyButton": "Verificar Correo",
+    "verifying": "Verificando...",
+    "resendText": "¿No recibiste el código?",
+    "resendButton": "Reenviar",
+    "backToSignIn": "← Volver a Iniciar Sesión",
+    "successTitle": "¡Correo verificado!",
+    "successSubtitle": "Tu correo ha sido verificado exitosamente. Ahora puedes acceder a tu cuenta.",
+    "continueButton": "Continuar a Jessy"
+  },
+  "ResetPassword": {
+    "title": "Restablece tu contraseña",
+    "subtitle": "Ingresa tu dirección de correo y te enviaremos un enlace para restablecer tu contraseña.",
+    "emailLabel": "Dirección de Correo",
+    "emailPlaceholder": "Ingresa tu correo",
+    "sendButton": "Enviar enlace de restablecimiento",
+    "sending": "Enviando...",
+    "backToSignIn": "← Volver a Iniciar Sesión",
+    "successTitle": "Revisa tu correo",
+    "successSubtitle": "Hemos enviado un enlace de restablecimiento de contraseña a",
+    "spamText": "¿No recibiste el correo? Revisa tu carpeta de spam o intenta de nuevo.",
+    "backButton": "Volver a Iniciar Sesión"
+  },
+  "NewPassword": {
+    "title": "Establecer nueva contraseña",
+    "subtitle": "Ingresa tu nueva contraseña para completar el proceso de restablecimiento",
+    "passwordLabel": "Nueva Contraseña",
+    "passwordPlaceholder": "Ingresa nueva contraseña",
+    "confirmPasswordLabel": "Confirmar Nueva Contraseña",
+    "confirmPasswordPlaceholder": "Confirmar nueva contraseña",
+    "resetButton": "Restablecer Contraseña",
+    "resetting": "Restableciendo...",
+    "backToSignIn": "← Volver a Iniciar Sesión",
+    "successTitle": "¡Contraseña restablecida exitosamente!",
+    "successSubtitle": "Tu contraseña ha sido actualizada. Ahora puedes iniciar sesión con tu nueva contraseña.",
+    "signInButton": "Iniciar Sesión"
   }
 }
