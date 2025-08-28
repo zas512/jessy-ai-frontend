@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
