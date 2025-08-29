@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -7,34 +6,23 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-export default function NewPasswordPage() {
+export default function ResetPasswordPage() {
   const router = useRouter();
-  const t = useTranslations("NewPassword");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const t = useTranslations("ResetPassword");
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
-
     setIsLoading(true);
-    // Handle password reset logic here
-    console.log("New password set:", { password, confirmPassword });
-
-    // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      setIsSuccess(true);
+      setIsSubmitted(true);
     }, 2000);
   };
 
-  if (isSuccess) {
+  if (isSubmitted) {
     return (
       <div className="text-center space-y-10">
         {/* Success Message */}
@@ -57,17 +45,18 @@ export default function NewPasswordPage() {
           <div className="space-y-3">
             <h1 className="text-5xl font-semibold">{t("successTitle")}</h1>
             <p className="text-2xl text-[#1F1F1F] font-[400] tracking-wider">
-              {t("successSubtitle")}
+              {t("successSubtitle")} <strong>{email}</strong>
             </p>
+            <p className="text-lg text-gray-500">{t("spamText")}</p>
           </div>
         </div>
 
-        {/* Sign In Button */}
+        {/* Back to Sign In */}
         <Button
           onClick={() => router.push("/sign-in")}
           className="w-full bg-purple h-16 text-xl flex items-center justify-center gap-2 font-medium hover:bg-purple-800 hover:shadow-md"
         >
-          <p>{t("signInButton")}</p>
+          <p>{t("backButton")}</p>
           <ArrowRight className="size-6" />
         </Button>
       </div>
@@ -76,7 +65,7 @@ export default function NewPasswordPage() {
 
   return (
     <div className="text-center space-y-10">
-      {/* New Password Form */}
+      {/* Reset Password Form */}
       <div className="space-y-3">
         <h1 className="text-5xl font-semibold">{t("title")}</h1>
         <p className="text-2xl text-[#1F1F1F] font-[400] tracking-wider">
@@ -87,35 +76,17 @@ export default function NewPasswordPage() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-3">
           <label
-            htmlFor="password"
+            htmlFor="email"
             className="block text-xl font-semibold text-left"
           >
-            {t("passwordLabel")}
+            {t("emailLabel")}
           </label>
           <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder={t("passwordPlaceholder")}
-            required
-            className="w-full bg-[#F9F9F9] border border-[#1F1F1F]/10 rounded-lg h-16 px-6 placeholder:text-xl placeholder:text-[#1F1F1F]/10"
-          />
-        </div>
-
-        <div className="space-y-3">
-          <label
-            htmlFor="confirmPassword"
-            className="block text-xl font-semibold text-left"
-          >
-            {t("confirmPasswordLabel")}
-          </label>
-          <input
-            id="confirmPassword"
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder={t("confirmPasswordPlaceholder")}
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t("emailPlaceholder")}
             required
             className="w-full bg-[#F9F9F9] border border-[#1F1F1F]/10 rounded-lg h-16 px-6 placeholder:text-xl placeholder:text-[#1F1F1F]/10"
           />
@@ -123,10 +94,10 @@ export default function NewPasswordPage() {
 
         <Button
           type="submit"
-          disabled={isLoading || !password || !confirmPassword}
+          disabled={isLoading}
           className="w-full bg-purple h-16 text-xl flex items-center justify-center gap-2 font-medium hover:bg-purple-800 hover:shadow-md disabled:bg-gray-300"
         >
-          <p>{isLoading ? t("resetting") : t("resetButton")}</p>
+          <p>{isLoading ? t("sending") : t("sendButton")}</p>
           <ArrowRight className="size-6" />
         </Button>
       </form>

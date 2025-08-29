@@ -75,7 +75,7 @@ export default function SignInPage() {
         <div className="flex justify-end">
           <button
             type="button"
-            onClick={() => router.push("/reset-password")}
+            onClick={() => router.push("/forgot-password")}
             className="text-lg text-purple hover:bg-purple-800 hover:shadow-md font-medium"
           >
             {t("emailForm.forgotPassword")}
